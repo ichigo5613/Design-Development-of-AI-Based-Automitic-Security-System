@@ -1,0 +1,37 @@
+int relay = 2;
+int buz = 3;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(relay, OUTPUT);
+    pinMode(buz, OUTPUT);  
+}
+
+void normal()
+{
+  if(Serial.available()>0)
+  {
+    int pc_data = Serial.parseInt();
+    Serial.println(pc_data);
+    if(pc_data == 1)
+    {
+      digitalWrite(relay, HIGH);       
+    }
+    else if(pc_data == 0)
+    {
+      digitalWrite(relay, LOW);
+       digitalWrite(buz, HIGH); 
+       delay(5000);    
+      digitalWrite(buz, LOW); 
+ 
+    } 
+    else
+    {
+        digitalWrite(buz, LOW); 
+      }
+  }  
+}
+void loop()
+{
+normal();
+}
