@@ -16,3 +16,5 @@ Step 3: Open Jupyter Notebook & change Kernal to iris kerel & run iris_classific
 Step 1: Install python latest version from https://www.python.org/downloads/
 Step 2: Install python libraries which are mentioned in module.txt file
 step 3: run application.py in command prompt
+
+Update New dataset When your training the model, there are 5 classes, 1st 4 comes under known classes & last is unknown classe
